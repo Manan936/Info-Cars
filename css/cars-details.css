@@ -1,0 +1,111 @@
+/* ================= CAR DETAILS PAGE ================= */
+
+.car-details-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px 50px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 60px;
+
+  background: #141414;
+  border-radius: 18px;
+}
+
+/* ================= IMAGE SECTION ================= */
+
+.car-image img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  background: #1f1f1f;
+}
+
+/* ================= INFO SECTION ================= */
+
+.car-info h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.car-tagline {
+  font-size: 0.95rem;
+  color: #b5b5b5;
+  margin-bottom: 30px;
+}
+
+/* ================= SPECS ================= */
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 14px;
+  margin-bottom: 32px;
+}
+
+.specs div {
+  font-size: 0.92rem;
+  color: #d1d1d1;
+}
+
+.specs strong {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #cfcfcf;
+  max-width: 480px;
+  margin-bottom: 36px;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.details-btn {
+  display: inline-block;
+  padding: 11px 20px;
+  background: #ffffff;
+  color: #111;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.details-btn:hover {
+  background: #e10600;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .car-details-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .car-details-container {
+    padding: 22px;
+  }
+
+  .specs {
+    grid-template-columns: 1fr;
+  }
+}

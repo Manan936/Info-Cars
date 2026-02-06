@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarVerse X | Car Details</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/cars-details.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">CarVerse <span>X</span></div>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html" class="active">Cars</a></li>
+            <li><a href="brands.html">Brands</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= CAR DETAILS ================= -->
+    <section class="car-details-container">
+      <div class="car-image">
+        <img id="carImage" />
+      </div>
+
+      <div class="car-info">
+        <h1 id="carName"></h1>
+        <p class="car-tagline" id="carTagline"></p>
+
+        <div class="specs" id="carSpecs"></div>
+
+        <p class="description" id="carDescription"></p>
+
+        <a href="cars.html" class="details-btn">← Back to Garage</a>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <p>© 2026 CarVerse X — Performance Meets Precision</p>
+    </footer>
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+      const cars = {
+        aventador: {
+          name: "Lamborghini Aventador",
+          image: "https://images.unsplash.com/photo-1502877338535-766e1452684a",
+          tagline: "Pure V12 aggression",
+          specs: {
+            Brand: "Lamborghini",
+            Engine: "6.5L V12",
+            Power: "769 HP",
+            Speed: "350 km/h",
+            Drive: "AWD",
+          },
+          description:
+            "The Aventador is a statement of raw power and design, delivering an unforgettable V12 driving experience.",
+        },
+
+        chiron: {
+          name: "Bugatti Chiron",
+          image: "https://images.unsplash.com/photo-1549921296-3b4a4e31f4f1",
+          tagline: "Engineering without limits",
+          specs: {
+            Brand: "Bugatti",
+            Engine: "8.0L Quad-Turbo W16",
+            Power: "1500 HP",
+            Speed: "420 km/h",
+            Drive: "AWD",
+          },
+          description:
+            "The Chiron redefines what a hypercar can be, combining extreme luxury with unimaginable performance.",
+        },
+
+        "ferrari-488": {
+          name: "Ferrari 488 GTB",
+          image: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023",
+          tagline: "Italian performance perfected",
+          specs: {
+            Brand: "Ferrari",
+            Engine: "3.9L Twin-Turbo V8",
+            Power: "661 HP",
+            Speed: "330 km/h",
+            Drive: "RWD",
+          },
+          description:
+            "The Ferrari 488 GTB delivers razor-sharp handling and thrilling turbocharged performance.",
+        },
+
+        "porsche-911": {
+          name: "Porsche 911",
+          image: "https://images.unsplash.com/photo-1542362567-b07e54358753",
+          tagline: "Timeless sports icon",
+          specs: {
+            Brand: "Porsche",
+            Engine: "Flat-6",
+            Power: "379 HP",
+            Speed: "308 km/h",
+            Drive: "RWD / AWD",
+          },
+          description:
+            "An icon for decades, the Porsche 911 balances everyday usability with pure driving pleasure.",
+        },
+
+        "bmw-m4": {
+          name: "BMW M4",
+          image: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068",
+          tagline: "Precision meets power",
+          specs: {
+            Brand: "BMW",
+            Engine: "3.0L Twin-Turbo Inline-6",
+            Power: "503 HP",
+            Speed: "290 km/h",
+            Drive: "RWD / AWD",
+          },
+          description:
+            "The BMW M4 is engineered for drivers who demand performance without compromise.",
+        },
+
+        "audi-r8": {
+          name: "Audi R8",
+          image: "https://images.unsplash.com/photo-1553440569-bcc63803a83d",
+          tagline: "V10. Naturally aspirated.",
+          specs: {
+            Brand: "Audi",
+            Engine: "5.2L V10",
+            Power: "602 HP",
+            Speed: "330 km/h",
+            Drive: "Quattro AWD",
+          },
+          description:
+            "The Audi R8 blends supercar performance with everyday usability and quattro confidence.",
+        },
+
+        "amg-gt": {
+          name: "Mercedes-AMG GT",
+          image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2",
+          tagline: "Luxury with muscle",
+          specs: {
+            Brand: "Mercedes-AMG",
+            Engine: "4.0L Twin-Turbo V8",
+            Power: "577 HP",
+            Speed: "318 km/h",
+            Drive: "RWD",
+          },
+          description:
+            "A bold grand tourer delivering handcrafted power and unmistakable AMG character.",
+        },
+
+        "model-s": {
+          name: "Tesla Model S Plaid",
+          image: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738",
+          tagline: "Electric speed reinvented",
+          specs: {
+            Brand: "Tesla",
+            Engine: "Tri-Motor Electric",
+            Power: "1020 HP",
+            Speed: "322 km/h",
+            Drive: "AWD",
+          },
+          description:
+            "The Model S Plaid proves electric cars can dominate both straight lines and daily driving.",
+        },
+
+        phantom: {
+          name: "Rolls-Royce Phantom",
+          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d",
+          tagline: "The pinnacle of luxury",
+          specs: {
+            Brand: "Rolls-Royce",
+            Engine: "6.75L V12",
+            Power: "563 HP",
+            Speed: "250 km/h",
+            Drive: "RWD",
+          },
+          description:
+            "The Phantom is handcrafted perfection, delivering unmatched comfort and presence.",
+        },
+
+        "720s": {
+          name: "McLaren 720S",
+          image: "https://images.unsplash.com/photo-1590362891991-f776e747a588",
+          tagline: "Track-focused excellence",
+          specs: {
+            Brand: "McLaren",
+            Engine: "4.0L Twin-Turbo V8",
+            Power: "710 HP",
+            Speed: "341 km/h",
+            Drive: "RWD",
+          },
+          description:
+            "Built around aerodynamics and lightness, the 720S is a true driver’s supercar.",
+        },
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const carId = params.get("id");
+      const car = cars[carId];
+
+      if (car) {
+        document.getElementById("carImage").src = car.image;
+        document.getElementById("carImage").alt = car.name;
+        document.getElementById("carName").textContent = car.name;
+        document.getElementById("carTagline").textContent = car.tagline;
+        document.getElementById("carDescription").textContent = car.description;
+
+        const specsContainer = document.getElementById("carSpecs");
+        specsContainer.innerHTML = "";
+
+        for (const key in car.specs) {
+          specsContainer.innerHTML += `<div><strong>${key}:</strong> ${car.specs[key]}</div>`;
+        }
+      }
+    </script>
+  </body>
+</html>

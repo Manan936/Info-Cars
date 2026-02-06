@@ -2,674 +2,153 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CarVerse X | The Ultimate Car Universe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Info Cars</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="index.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><marquee behavior="alternate" class="marquee">
-            <logo>Info Cars</logo>
-          </marquee>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Learn More</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Cars Available
-              </a>
-              <ul
-                class="dropdown-menu dropdown-menu-dark"
-                data-toggle="dropdown"
-                data-hover="dropdown"
-              >
-                <div class="container" width="400px">
-                  <div class="row">
-                    <div class="col">
-                      <li>
-                        <a
-                          href="#RollsRoyce"
-                          class="dropdown-item .col-6 .col-md-4"
-                          >Rolls Royce</a
-                        >
-                      </li>
-                    </div>
-                    <div class="col">
-                      <li>
-                        <a href="#bmw" class="dropdown-item .col-6 .col-md-4"
-                          >BMW</a
-                        >
-                      </li>
-                    </div>
-                    <div class="col">
-                      <li>
-                        <a
-                          href="#Mercedes"
-                          class="dropdown-item .col-6 .col-md-4"
-                          >Mercedes</a
-                        >
-                      </li>
-                    </div>
-                    <div class="col">
-                      <li><a href="#AUDI" class="dropdown-item">AUDI</a></li>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <li>
-                        <a href="#Bently" class="dropdown-item">Bently</a>
-                      </li>
-                    </div>
-                    <div class="col">
-                      <li>
-                        <a href="#AstonMartin" class="dropdown-item"
-                          >Aston Martin</a
-                        >
-                      </li>
-                    </div>
-                    <div class="col">
-                      <li>
-                        <a href="#Maserati" class="dropdown-item">Maserati</a>
-                      </li>
-                    </div>
-                    <div class="col">
-                      <li>
-                        <a href="#Ferrari" class="dropdown-item">Ferrari</a>
-                      </li>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <li>
-                        <a href="#Buggati" class="dropdown-item">Buggati</a>
-                      </li>
-                    </div>
-                    <div class="col">
-                      <li>
-                        <a href="#Lamborghini" class="dropdown-item"
-                          >Lamborghini</a
-                        >
-                      </li>
-                    </div>
-                    <div class="col">
-                      <li>
-                        <a href="#Koinegsegg" class="dropdown-item"
-                          >Koinegsegg</a
-                        >
-                      </li>
-                    </div>
-                    <div class="col">
-                      <li>
-                        <a href="#Maclaren" class="dropdown-item">Maclaren</a>
-                      </li>
-                    </div>
-                  </div>
-                </div>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">CarVerse <span>X</span></div>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="brands.html">Brands</a></li>
+
+            <li class="dropdown">
+              <span>More</span>
+              <ul class="dropdown-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="contact.html">Contact</a></li>
               </ul>
             </li>
           </ul>
-
-          <div class="d-flex me-4 p-1">
-            <form class="me-4 p-1" role="search">
-              <button
-                class="btn btn-dark"
-                style="background-color: #310202f9 !important"
-              >
-                Sign In
-              </button>
-            </form>
-            <form class="me-4 p-1" role="search">
-              <button
-                class="btn btn-dark"
-                style="background-color: #2b0101f7 !important"
-              >
-                Sign Up
-              </button>
-            </form>
-          </div>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <main>
-      <fieldset id="RollsRoyce" class="field border p-2">
-        <legend class="title float-none w-auto">Rolls Royce</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://c4.wallpaperflare.com/wallpaper/783/231/625/rolls-royce-blue-car-luxury-vehicle-2018-wallpaper-preview.jpg"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Rolls Royce Phantom</h3>
-                <p class="card-text">
-                  The Rolls-Royce Phantom is a full-sized luxury saloon
-                  manufactured by Rolls-Royce Motor Cars. it has 1 Petrol Engine
-                  on offer. The Petrol engine is 6749 cc . It is available with
-                  Automatic transmission.Depending upon the variant and fuel
-                  type the Phantom has a mileage of 9.8 kmpl & Ground clearance
-                  of Phantom is 164mm. The Phantom is a 5 seater 12 cylinder car
-                  and has length of 5982mm, width of 2018mm and a wheelbase of
-                  3772mm.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price <span> &#8377; 8.99 - 10.48 Cr*</span>
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </fieldset>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
 
-      <fieldset id="bmw" class="field border p-2">
-        <legend class="title float-none w-auto">BMW</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                href="https://pictures.topspeed.com/IMG/crop_webp/200807/2009-bmw-7-series-21_1600x0.webp"
-                src="https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/7-Series-2024/8971/1650532782902/front-left-side-47.jpg?tr=w-456"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">BMW 7 Series</h3>
-                <p class="card-text">
-                  Heaven is like a drive that elevates you, it doesn't just take
-                  you places but to experiences as well. The BMW 7 Series
-                  delivers that experience of self-assured presence, exceptional
-                  performance and maximum comfort. Imagined, designed and
-                  crafted for individuals who value every moment. MW 7 Series is
-                  a 4 seater Sedan. It is available in 4 variants, 2 engine
-                  options that are BS6 compliant and a single Automatic
-                  transmission. Other key specifications of the 7 Series include
-                  a kerb weight of and boot space of Liters. The 7 Series is
-                  available in 23 colours.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price <span> &#8377; 1.949 - 1.76 Cr*</span>
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </fieldset>
+      <div class="hero-content">
+        <h1>The World of <span>Cars</span></h1>
+        <p>
+          Explore hypercars, classics, electric beasts, and legendary machines —
+          all in one universe.
+        </p>
+        <a href="cars.html" class="cta-btn">Explore Collection</a>
+      </div>
+    </section>
 
-      <fieldset id="Mercedes" class="field border p-2">
-        <legend class="title float-none w-auto p-2">Mercedes</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://images.moneycontrol.com/static-mcnews/2020/11/6-mercedes-maybach-sclass.jpg"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Mercedes Maybach S Class</h3>
-                <p class="card-text">
-                  Mercedes-Benz Maybach S-Class is a 4 seater. It is available
-                  in 2 variants, 2 engine options that are BS6 compliant and a
-                  single Automatic transmission. Other key specifications of the
-                  Maybach S-Class include a kerb weight of and boot space of
-                  Liters. The Maybach S-Class is available in 18 colours.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377; 2.50 - 3.20 Cr*</span>
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </fieldset>
+    <!-- ================= FEATURED ================= -->
+    <!-- ================= FEATURED ================= -->
+    <section class="featured-section">
+      <h2>Featured Machines</h2>
+      <p class="section-subtitle">
+        Icons of speed, luxury, and engineering excellence
+      </p>
 
-      <fieldset id="AUDI" class="field border p-2">
-        <legend class="title float-none w-auto p-2">AUDI</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://wallpaperaccess.com/full/1620250.jpg"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Audi A8</h3>
-                <p class="card-text">
-                  Audi A8 is a 5 seater Luxury. It is available in 1 variants, a
-                  2995 cc, BS6 and a single Automatic transmission. Other key
-                  specifications of the A8 include a kerb weight of 2030 and
-                  boot space of Liters. The A8 is available in 12 colours.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377; 1.58 Cr*</span>
-                </h5>
-              </div>
-            </div>
+      <div class="featured-grid">
+        <a href="cars.html" class="featured-card">
+          <img
+            src="https://images.unsplash.com/photo-1612825173281-9a193378527e?q=80&w=799&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Lamborghini Aventador"
+          />
+          <div class="card-info">
+            <h3>Lamborghini Aventador</h3>
+            <span>V12 · 770 HP</span>
           </div>
-        </div>
-      </fieldset>
+        </a>
 
-      <fieldset id="Bently" class="field border p-2">
-        <legend class="title float-none w-auto p-2">Bently</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://cdn.motor1.com/images/mgl/RP9Zw/s1/2020-bentley-continental-gt.jpg"
-                class="img-fluid rounded-start card-image"
-              =
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Bently Continental GT</h3>
-                <p class="card-text">
-                  Meet the ultimate grand touring car. This unique combination
-                  of power, craftsmanship and stunning automotive design is
-                  available with two powertrains: a thrilling 4.0 litre V8
-                  petrol engine or the phenomenally powerful 6.0 litre W12
-                  petrol engine. Bentley Continental is a 4 seater Super Luxury.
-                  It is available in 4 variants, 2 engine options that are BS6
-                  compliant and a single Automatic transmission. Other key
-                  specifications of the Continental include a kerb weight of
-                  2495kg, ground clearance of 142mm and boot space of 358
-                  Liters. The Continental is available in 5 colours.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377; 3.29 - 3.91 Cr*</span>
-                </h5>
-              </div>
-            </div>
+        <a href="cars.html" class="featured-card">
+          <img
+            src="https://images.unsplash.com/photo-1689826493949-5e5824a5474e?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Bugatti Chiron"
+          />
+          <div class="card-info">
+            <h3>Bugatti Chiron</h3>
+            <span>1500 HP · Hypercar</span>
           </div>
-        </div>
-      </fieldset>
+        </a>
 
-      <fieldset id="AstonMartin" class="field border p-2">
-        <legend class="title float-none w-auto p-2">Aston Martin</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://www.ccarprice.com/products/Aston-Martin-Vantage-Roadstar-2021.jpg"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Aston Martin Vantage</h3>
-                <p class="card-text">
-                  Aston Martin Vantage is a 2 seater Convertible . It is
-                  available in 2 variants, a 3998 cc, BS6 and a single Manual
-                  transmission. Other key specifications of the Vantage include
-                  a kerb weight of and boot space of Liters. The Vantage is
-                  available in 14 colours.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377; 3.00 - 3.50 Cr*</span>
-                </h5>
-              </div>
-            </div>
+        <a href="cars.html" class="featured-card">
+          <img
+            src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738"
+            alt="Tesla Model S Plaid"
+          />
+          <div class="card-info">
+            <h3>Tesla Model S Plaid</h3>
+            <span>Electric · 0–100 in 2s</span>
           </div>
-        </div>
-      </fieldset>
+        </a>
 
-      <fieldset id="Maserati" class="field border p-2">
-        <legend class="title float-none w-auto p-2">Maserati</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://www.hdcarwallpapers.com/walls/maserati_quattroporte_granlusso_royale_2020_5k-HD.jpg"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h5 class="card-title">Maserati Quattroporte</h5>
-                <p class="card-text">
-                  Maserati Quattroporte is a 5 seater Luxury. It is available in
-                  8 variants, 3 engine options that are BS6 compliant and a
-                  single Automatic transmission. Other key specifications of the
-                  Quattroporte include a kerb weight of, ground clearance of
-                  100mm and boot space of 530ers Liters. The Quattroporte is
-                  available in 6 colours.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377; 1.71 - 2.12 Cr*</span>
-                </h5>
-              </div>
-            </div>
+        <a href="cars.html" class="featured-card">
+          <img
+            src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023"
+            alt="Ferrari 488"
+          />
+          <div class="card-info">
+            <h3>Ferrari 488 GTB</h3>
+            <span>V8 · Italian Supercar</span>
           </div>
-        </div>
-      </fieldset>
+        </a>
 
-      <fieldset id="Ferrari" class="field border p-2">
-        <legend class="title float-none w-auto p-2">Ferrari</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://imageio.forbes.com/blogs-images/markewing/files/2019/07/SF90_Stradale_11-1200x843.jpg?format=jpg&width=960"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Ferrari SF90 Stradale</h3>
-                <p class="card-text">
-                  Ferrari SF90 Stradale is a 2 seater Coupe. It is available in
-                  1 variants, a 3990 cc, BS6 and a single Automatic
-                  transmission. Other key specifications of the SF90 Stradale
-                  include a kerb weight of 1570kg and boot space of 74 Liters.
-                  The SF90 Stradale is available in 23 colours.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377; Rs. 7.50 Cr*</span>
-                </h5>
-              </div>
-            </div>
+        <a href="cars.html" class="featured-card">
+          <img
+            src="https://images.unsplash.com/photo-1542362567-b07e54358753"
+            alt="Porsche 911"
+          />
+          <div class="card-info">
+            <h3>Porsche 911</h3>
+            <span>Timeless Performance</span>
           </div>
-        </div>
-      </fieldset>
-      <!-- -->
-      <!-- -->
-      <fieldset id="Buggati" class="field border p-2">
-        <legend class="title float-none w-auto p-2">Buggati</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Bugatti/Chiron/8451/1633582433934/front-left-side-47.jpg?tr=w-456"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Buggati Chiron</h3>
-                <p class="card-text">
-                  The Chiron is Bugatti’s natural successor to the Veyron.
-                  Powered by a 8.0-litre quad-turbocharged W16 engine that makes
-                  a whopping 1500PS of power and 1600Nm of torque, the Chiron
-                  can do the 0-100kmph run in just 2.5 seconds. Power is sent to
-                  all four wheels by a Haldex All-Wheel-Drive system and its top
-                  speed is limited to 420kmph. The Chiron’s only real
-                  competition comes from the Koenigsegg Agera RS and Hennessey
-                  Venom GT. Bugatti will build the Chiron in limited numbers,
-                  500 to be precise.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377;19.21 - 28.40 Cr*</span>
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </fieldset>
+        </a>
 
-      <fieldset id="Lamborghini" class="field border p-2">
-        <legend class="title float-none w-auto p-2">Lamborghini</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://www.ccarprice.com/products/Lamborghini-Huracan-Evo-RWD-2021.jpg"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Lamborghini Huracan EVO</h3>
-                <p class="card-text">
-                  Lamborghini Huracan EVO is a 2 seater Coupe.. It is available
-                  in 5 variants, a 5204 cc, BS6 and a single Automatic
-                  transmission. Other key specifications of the Huracan EVO
-                  include a kerb weight of 1339kg and boot space of Liters. The
-                  Huracan EVO is available in 23 colours.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377;3.21 - 4.99 Cr*</span>
-                </h5>
-              </div>
-            </div>
+        <a href="cars.html" class="featured-card">
+          <img
+            src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068"
+            alt="BMW M4"
+          />
+          <div class="card-info">
+            <h3>BMW M4</h3>
+            <span>German Precision</span>
           </div>
-        </div>
-      </fieldset>
+        </a>
 
-      <fieldset id="Koinegsegg" class="field border p-2">
-        <legend class="title float-none w-auto p-2">Koinegsegg</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://cdn.carbuzz.com/gallery-images/1600/684000/700/684758.jpg"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Koinegsegg Jesko Absolut</h3>
-                <p class="card-text">
-                  The Koenigsegg Jesko is a limited production mid-engine sports
-                  car produced by Swedish automobile manufacturer Koenigsegg.
-                  Introduced at the 2019 Geneva Motor Show, the car succeeds the
-                  Agera. The name Jesko is a tribute to the company founder's
-                  father, Jesko von Koenigsegg.[3] The automobile is named after
-                  Jesko von Koenigsegg, the father of Christian von Koenigsegg
-                  The Jesko is primarily built as a high-performance track car,
-                  with focus on high aerodynamic downforce and more precise
-                  handling. Koenigsegg's other current production model, the
-                  Regera, is designed as a grand touring-oriented offering.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377;21 Cr*</span>
-                </h5>
-              </div>
-            </div>
+        <a href="cars.html" class="featured-card">
+          <img
+            src="https://images.unsplash.com/photo-1553440569-bcc63803a83d"
+            alt="Audi R8"
+          />
+          <div class="card-info">
+            <h3>Audi R8</h3>
+            <span>V10 · Quattro</span>
           </div>
-        </div>
-      </fieldset>
+        </a>
 
-      <fieldset id="Maclaren" class="field border p-2">
-        <legend class="title float-none w-auto p-2">Maclaren</legend>
-        <div
-          class="card text-bg-dark mb-2"
-          style="background-color: #5327031c !important"
-        >
-          <div class="row">
-            <div class="col-lg">
-              <img
-                src="https://robbreport.com/wp-content/uploads/2019/04/mclaren-d.jpg"
-                class="img-fluid rounded-start card-image"
-                alt="..."
-              />
-            </div>
-            <div class="col-lg">
-              <div class="card-body">
-                <h3 class="card-title">Maclaren Speedtail</h3>
-                <p class="card-text">
-                  The Speedtail, McLaren's latest offering in its Super Series
-                  of hypercars is what the company calls a Hyper-GT. Powered by
-                  an evolution of the 4.0-liter twin-turbo V8 found in the 720S,
-                  as well as the fashionable hybrid assistance you'd expect of a
-                  modern hypercar, the Speedtail produces 1,036 horsepower and
-                  848 lb-ft of torque, all of which is sent to the rear wheels
-                  via a seven-speed dual-clutch automatic.
-                </p>
-                <h5
-                  style="
-                    background-color: #10035388 !important;
-                    text-align: center;
-                  "
-                >
-                  Price<span>&#8377;16.04Cr*</span>
-                </h5>
-              </div>
-            </div>
+        <a href="cars.html" class="featured-card">
+          <img
+            src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2"
+            alt="Mercedes AMG GT"
+          />
+          <div class="card-info">
+            <h3>Mercedes-AMG GT</h3>
+            <span>Luxury Meets Power</span>
           </div>
-        </div>
-      </fieldset>
-    </main>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
-      <h4>Contect Us</h4>
-      <h4>InfoCars&copy;2022//All Rights Reserved</h4>
-      <h4>Helpline</h4>
+      <p>© 2026 CarVerse X · Built for true car enthusiasts</p>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
