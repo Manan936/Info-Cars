@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand Cars | CarVerse X</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/cars.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">CarVerse <span>X</span></div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li class="dropdown">
+              <span>More</span>
+              <ul class="dropdown-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HEADER -->
+    <section class="cars-header">
+      <h1 id="brandTitle">Brand Cars</h1>
+      <p id="brandSubtitle">Vehicles from this brand</p>
+    </section>
+
+    <!-- CARS GRID -->
+    <section class="cars-grid" id="carsContainer">
+      <!-- Cars will be populated here by JavaScript -->
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 CarVerse X — Built for Car Lovers</p>
+    </footer>
+
+    <script src="js/cars.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const brandFilter = params.get("brand");
+
+      if (brandFilter) {
+        document.getElementById(
+          "brandTitle"
+        ).textContent = `${brandFilter} Vehicles`;
+        document.getElementById(
+          "brandSubtitle"
+        ).textContent = `Explore our ${brandFilter} collection`;
+
+        // Filter logic: Checks car.specs.Brand
+        const brandCars = Object.entries(cars).filter(
+          ([id, car]) =>
+            car.specs.Brand.toLowerCase() === brandFilter.toLowerCase()
+        );
+
+        const container = document.getElementById("carsContainer");
+        if (brandCars.length > 0) {
+          container.innerHTML = brandCars
+            .map(
+              ([id, car]) => `
+                    <a href="car-details.html?id=${id}" class="car-card">
+                        <img src="${car.image}" alt="${car.name}" />
+                        <div class="car-info">
+                            <h3>${car.name}</h3>
+                            <span>${car.tagline}</span>
+                        </div>
+                    </a>
+                `
+            )
+            .join("");
+        } else {
+          container.innerHTML = `<p>No cars found for ${brandFilter}.</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>

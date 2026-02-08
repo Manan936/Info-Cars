@@ -1,59 +1,57 @@
-# 🏎️ CarVerse X — The Ultimate Car Universe
+# CarVerse X — The Ultimate Car Universe
 
-A sleek, modern car encyclopedia web application built with vanilla HTML, CSS, and JavaScript. Browse luxury cars, hypercars, EVs, and classics — all in one place.
+A premium, modern car information and showcase platform built with HTML5, CSS3, and vanilla JavaScript. Explore hypercars, classics, electric beasts, and legendary machines in one interactive universe.
 
-## 📍 Live Site
+## 🌐 Live Site
 
-Visit: [Info-Cars](https://manan936.github.io/Info-Cars/)
+Experience CarVerse X at: https://manan936.github.io/Info-Cars/
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- **Home Page**: Hero section with featured machines and smooth animations
-- **All Cars Catalogue**: Browse a curated collection of luxury and performance vehicles
-- **Brand Listings**: Organized by manufacturer
-- **Car Details Pages**: Individual pages with specs, top speed, acceleration, engine info
-- **Contact Form**: Get in touch (demo-enabled with form validation)
-- **About & Help Pages**: Information and support sections
-- **Responsive Design**: Fully mobile, tablet, and desktop optimized
-- **Glass-Morphism UI**: Modern frosted-glass aesthetic with smooth fade-in animations
-- **Dark Mode**: Sleek dark theme throughout
+- **Home Page** – Stunning hero section with featured cars and call-to-action
+- **Complete Car Catalogue** – Browse extensive collection of hypercars and performance vehicles
+- **Brand Directory** – Explore cars organized by iconic manufacturers
+- **Dynamic Car Details** – View specs, images, and descriptions for each vehicle (powered by JavaScript)
+- **Brand Pages** – Dedicated pages for major car brands with detailed information
+- **Modern Navigation** – Sticky navbar with dropdown menu for easy browsing
+- **Responsive Design** – Fully optimized for desktop, tablet, and mobile devices
+- **Dark Theme UI** – Premium dark-mode interface with red accent colors
+- **About & Help Sections** – Learn more about the platform and get support
+- **Contact Page** – Get in touch with the team
 
 ---
 
 ## 📁 Project Structure
 
 ```
-infocars/
+Info-Cars/
 │
 ├── index.html              (Home / Hero with featured cars)
-├── cars.html               (All cars catalogue)
-├── brands.html             (Brand-wise listing)
-├── car-details.html        (Individual car detail page)
-├── about.html              (About CarVerse X)
-├── help.html               (FAQ & support)
+├── cars.html               (Complete cars catalogue grid)
+├── car-details.html        (Dynamic car detail page with specs)
+├── brands.html             (Brand directory and overview)
+├── brand-cars.html         (Brand-specific car listings)
+├── brands-cars.html        (Alternative brand view)
+├── about.html              (About CarVerse X platform)
+├── help.html               (FAQ & support documentation)
 ├── contact.html            (Contact form)
 │
 ├── css/
-│   ├── main.css            (Core styles: navbar, cards, layout, utilities)
-│   ├── cars.css            (Cars-specific styling)
-│   └── animations.css      (Fade-in & utility animations)
+│   ├── main.css            (Core styles: navbar, layout, dark theme, utilities)
+│   ├── cars.css            (Cars grid & brand page styles)
+│   └── cars-details.css    (Car details page styles & specs layout)
 │
 ├── js/
-│   ├── main.js             (Form handling, nav active state, utilities)
-│   └── cars.js             (Car dataset, rendering functions, detail pages)
-│
-├── assets/
-│   ├── images/             (Add car images here)
-│   └── icons/              (SVG icons — optional)
+│   └── cars.js             (Car database & dynamic content rendering)
 │
 └── README.md               (This file)
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
@@ -62,132 +60,143 @@ git clone https://github.com/Manan936/Info-Cars.git
 cd Info-Cars
 ```
 
-### 2. Open Locally
+### 2. Open the Project
 
-**Option A: Direct browser**
+**Option A: Direct Browser**
 
-```
-Double-click index.html
-```
+- Simply double-click `index.html` to open in your default browser
 
-**Option B: Live Server (VS Code)**
+**Option B: VS Code Live Server**
 
-- Install "Live Server" extension
-- Right-click `index.html` → "Open with Live Server"
+- Install the "Live Server" extension in VS Code
+- Right-click `index.html` → Select "Open with Live Server"
+- Automatically opens at `http://localhost:5500`
 
 **Option C: Python HTTP Server**
 
-```bash
+```powershell
 python -m http.server 8000
-# Then visit http://localhost:8000
+# Visit http://localhost:8000 in your browser
 ```
 
-### 3. Explore the Site
+**Option D: Node.js http-server**
 
-- Home: Featured cars and hero section
-- Cars: Full catalogue with links to details
-- Brands: Brand listings
-- Car Details: Click any car card to see full specs
-- Contact: Fill and submit the contact form
-- About & Help: Learn more about the site
+```powershell
+npx http-server
+# Serves on http://localhost:8080
+```
 
 ---
 
-## 🎨 Customization
+## 🎨 Design & Customization
 
-### Add Your Own Cars
+### Color Scheme (Dark Theme)
 
-Edit `js/cars.js` and update the `demoCars` array:
-
-```javascript
-const demoCars = [
-  {
-    id: 1,
-    brand: "Your Brand",
-    name: "Model Name",
-    price: "₹ X.XX Cr",
-    img: "https://image-url.jpg",
-    description: "Short description.",
-    stats: { topSpeed: "300 km/h", zeroToHundred: "3.5s", engine: "V8" },
-  },
-  // Add more cars...
-];
-```
-
-### Customize Colors
-
-Update `css/main.css` root variables:
+Edit the CSS variables in `css/main.css`:
 
 ```css
 :root {
-  --primary: #ff2e2e; /* Accent color */
-  --dark: #0f0f0f; /* Dark background */
-  --light: #ffffff; /* Light text */
-  --gray: #cccccc;
+  --bg-dark: #0b0b0d; /* Main background */
+  --bg-card: #151518; /* Card background */
+  --bg-card-soft: #1c1c21; /* Soft card background */
+  --text-main: #ffffff; /* Primary text */
+  --text-muted: #b5b5b5; /* Secondary text */
+  --text-soft: #8e8e93; /* Tertiary text */
+  --accent: #e10600; /* Red accent color */
+  --border-soft: #26262c; /* Subtle borders */
 }
 ```
 
-### Change Hero Background
+### Adding New Cars
 
-In `css/main.css`, update `.hero`:
+Edit `js/cars.js` and add entries to the `cars` object:
 
-```css
-.hero {
-  background: url("YOUR_IMAGE_URL") center/cover;
-}
+```javascript
+const cars = {
+  "your-car-id": {
+    name: "Car Name",
+    image: "URL_to_image",
+    tagline: "Short description",
+    specs: {
+      Brand: "Brand Name",
+      Engine: "Engine specs",
+      Power: "Horsepower",
+      Speed: "Top speed",
+      Drive: "Drivetrain",
+    },
+    description: "Detailed description of the car",
+  },
+};
 ```
 
----
+### Customizing Content
 
-## 🔧 Technologies
-
-- **HTML5** – Semantic markup
-- **CSS3** – Flexbox, Grid, Glass-morphism, animations
-- **JavaScript (Vanilla)** – No frameworks or dependencies
-- **Responsive Design** – Mobile-first approach
+- **Homepage**: Edit `index.html` to modify hero section and featured cars
+- **Page Styling**: Update `css/main.css` for global styles, `css/cars.css` for car pages
+- **Navigation**: Modify navbar structure in any HTML file's header section
+- **Brand Information**: Update content in `brands.html` and brand-specific pages
 
 ---
+
+## 🔧 Technologies Used
+
+- **HTML5** – Semantic markup and structured content
+- **CSS3** – Flexbox, Grid, animations, dark theme styling
+- **JavaScript (Vanilla)** – Dynamic car data rendering, URL parameters, interactive features
+- **Responsive Design** – Mobile-first approach with media queries
+- **External Images** – Unsplash & Pixabay integration for car photography
+
+---
+
+## 📱 Browser Compatibility
+
+- Chrome/Edge (Latest)
+- Firefox (Latest)
+- Safari (Latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repository and submit pull requests for:
+
+- New car entries
+- UI/UX improvements
+- Bug fixes
+- Feature additions
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+**Made with ❤️ by [Manan936](https://github.com/Manan936)**
 
 ## 📱 Browser Support
 
-- ✅ Chrome/Edge (Latest)
-- ✅ Firefox (Latest)
-- ✅ Safari (Latest)
-- ⚠️ IE11 (Limited support)
+- Chrome/Edge (Latest)
+- Firefox (Latest)
+- Safari (Latest)
 
 ---
 
-## ✅ Completed Implementation
+## 🐛 Future Enhancements (Suggestions)
 
-- [x] Full project structure created (HTML, CSS, JS, assets)
-- [x] Standardized HTML templates across all pages
-- [x] Implemented car catalogue rendering with demo data
-- [x] Created car details page with query parameter support
-- [x] Built responsive CSS with glass-morphism design
-- [x] Added smooth fade-in animations
-- [x] Contact form with demo submission handling
-- [x] Active navigation link highlighting
-- [x] Mobile responsive design
-- [x] Comprehensive README documentation
-
----
-
-## 🐛 Future Enhancements
-
-- [ ] Replace demo data with real API/database
-- [ ] Implement backend for contact form submissions
-- [ ] Add search and filter functionality
-- [ ] Implement car comparison feature
-- [ ] Add image lazy-loading
-- [ ] Improve accessibility (WCAG 2.1 AA)
-- [ ] Add dark/light theme toggle
-- [ ] Performance optimization (minification, caching)
+- Add a small JavaScript layer to render dynamic car data
+- Replace demo/static content with a JSON dataset or API
+- Implement backend handling for the contact form
+- Add search and filter functionality on `cars.html`
+- Improve accessibility (WCAG 2.1 AA)
 
 ---
 
 ## 📝 License
 
-Open-source project. Feel free to use, modify, and share!
+Open-source project — use and modify as you like.
 
 ---
 
@@ -196,8 +205,8 @@ Open-source project. Feel free to use, modify, and share!
 **Manan936**  
 GitHub: [Manan936](https://github.com/Manan936)
 
-**Project Status:** ✅ Complete & Production-Ready
+**Project Status:** Static demo / In development
 
 ---
 
-**Last Updated:** February 6, 2026
+**Last Updated:** February 8, 2026
